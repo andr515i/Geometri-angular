@@ -1,0 +1,19 @@
+<div>
+    <app-square-form (formSubmit)="onFormSubmit($event)"></app-square-form>
+</div>
+
+<div *ngIf="sideLength">
+    <div>
+        <ng-container (ngOnInit)="showAlert();">
+
+        </ng-container>
+        <app-calculate-area [sideLength]="sideLength" [sideLength2]="sideLength2"></app-calculate-area>
+        <p>Area: {{ area }}</p>
+    </div>
+
+    <div>
+        <app-calcule-circumference [sideLength]="sideLength" [sideLength2]="sideLength2"></app-calcule-circumference>
+        <p>perimeter: {{ circumference }} (previously called circumference, aswell as currently is in the code, but
+            circumference is reserved for circles)</p>
+    </div>
+</div>
