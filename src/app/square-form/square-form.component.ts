@@ -19,7 +19,7 @@ export class SquareFormComponent {
   squareForm: FormGroup;
 
   constructor(private fb: FormBuilder) {
-    this.squareForm = this.fb.group({
+      this.squareForm = this.fb.group({
       sideLength: ['', Validators.required],
       sideLength2: ['', Validators.required]
     });
@@ -28,6 +28,6 @@ export class SquareFormComponent {
   onSubmit() {
     const formData = this.squareForm.value;
     console.log(formData)
-      this.formSubmit.emit(formData);      
+    this.formSubmit.emit(formData);      
   }
 }

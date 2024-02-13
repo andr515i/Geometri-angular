@@ -11,8 +11,8 @@ import { CommonModule, NgIf } from '@angular/common';
     imports: [SquareFormComponent, CalculateAreaComponent, CalculateCircumferenceComponent, CommonModule, NgIf]
 })
 export class SquareComponent {
-  @ViewChild(CalculateAreaComponent) calculateAreaComponent!: CalculateAreaComponent;
-  @ViewChild(CalculateCircumferenceComponent) calculateCircumferenceComponent!: CalculateCircumferenceComponent;
+  @ViewChild(CalculateAreaComponent) calculateAreaComponent: CalculateAreaComponent = new CalculateAreaComponent;
+  @ViewChild(CalculateCircumferenceComponent) calculateCircumferenceComponent: CalculateCircumferenceComponent = new CalculateCircumferenceComponent;
 
   sideLength: number = 0;
   sideLength2: number = 0;
