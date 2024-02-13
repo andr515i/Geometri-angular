@@ -1,12 +1,8 @@
 <div>
     <app-square-form (formSubmit)="onFormSubmit($event)"></app-square-form>
 </div>
-
-<div *ngIf="sideLength">
+<div *ngIf="sideLength > 0">
     <div>
-        <ng-container (ngOnInit)="showAlert();">
-
-        </ng-container>
         <app-calculate-area [sideLength]="sideLength" [sideLength2]="sideLength2"></app-calculate-area>
         <p>Area: {{ area }}</p>
     </div>
