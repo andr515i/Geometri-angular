@@ -7,18 +7,14 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./calculate-area.component.css']
 })
 export class CalculateAreaComponent {
-  @Input() sideLength: number = 0;
-  @Input() sideLength2: number = 0;
+  calculateArea(sideLength:number, sideLength2: number): number {
 
-  
-
-  calculateArea(): number {
-    console.log(`area:\n side 1 : ${this.sideLength} \n side2 : ${this.sideLength2}`)
-    if (this.sideLength > 0 && this.sideLength2 == 0) {
-      return this.sideLength * this.sideLength;
+    console.log(`area:\n side 1 : ${sideLength} \n side2 : ${sideLength2}`)
+    if (sideLength > 0 && sideLength2 == 0) {
+      return sideLength * sideLength;
     }
-    else if (this.sideLength > 0 && this.sideLength2 > 0) {
-      return this.sideLength * this.sideLength2;
+    else if (sideLength > 0 && sideLength2 > 0) {
+      return sideLength * sideLength2;
     }
     else {
       alert("pls enter only numbers greater than 0")

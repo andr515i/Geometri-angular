@@ -31,11 +31,11 @@ export class SquareComponent {
     alert('Side length is true!');
   }
   calculateArea() {
-      this.area = this.calculateAreaComponent.calculateArea();
+      this.area = this.calculateAreaComponent.calculateArea(this.sideLength, this.sideLength2);
   }
 
   calculateCircumference() {
-      this.circumference = this.calculateCircumferenceComponent.calculateCircumference();
+      this.circumference = this.calculateCircumferenceComponent.calculateCircumference(this.sideLength, this.sideLength2);
   }
 
 }
