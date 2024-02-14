@@ -27,9 +27,7 @@ export class SquareComponent {
     this.calculateArea();
     this.calculateCircumference();
   }
-  showAlert() {
-    alert('Side length is true!');
-  }
+ 
   calculateArea() {
       this.area = this.calculateAreaComponent.calculateArea(this.sideLength, this.sideLength2);
   }
